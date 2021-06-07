@@ -5,6 +5,7 @@
     "build": "vite build",
     "serve": "vite preview"
   },
+  "main": "main.js",
   "devDependencies": {
     "vite": "^2.3.5"
   },
