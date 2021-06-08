@@ -1,2 +1,7 @@
-node_modules/
-fontawesome/
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+fontawesome
+vite-project

@@ -1,5 +1,5 @@
 /* OrbitControls allows us to pan around the scene with our controller (mouse/finger) */
-import '/css/style.css';
+import './css/style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
