@@ -1,5 +1,5 @@
 /* OrbitControls allows us to pan around the scene with our controller (mouse/finger) */
-import '/style.css';
+import '/css/style.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
@@ -56,7 +56,7 @@ function addStar () {
 
 // Add 200 stars & set an external image as background
 Array(200).fill().forEach(addStar);
-const spaceTexture = new THREE.TextureLoader().load('./img/space.jpg');
+const spaceTexture = new THREE.TextureLoader().load('img/space.jpg');
 scene.background = spaceTexture;
 
 const jonTexture = new THREE.TextureLoader().load('./img/IMG_7268.jpg');

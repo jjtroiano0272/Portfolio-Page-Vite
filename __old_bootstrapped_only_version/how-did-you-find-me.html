@@ -1,0 +1,404 @@
+<!--  Author:         Jonathan J. troiano
+      Date Created:   January 25, 2021 (approx.)
+      Last Modified:  February 04, 2021 -->
+
+<!-- TODO: Some sections aren't sized properly...is this due to em vs. rem? -->
+<!-- TODO: Justify the damn text! -->
+<!-- TODO: SECTION: FAU research at Eco Lab -->
+<!-- TODO: SECTION: FAU research at Neuro Lab -->
+<!-- TODO: SECTION: YouTube music -->
+<!-- TODO: SECTION: Camp counselor -->
+<!-- TODO: Carousel indicators should either
+               1) Be dots
+               2) Have the active clickable area larger
+               3) On mobile: able to change the slides by swiping -->
+<!-- TODO: Smaller navbar on mobile -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio: Jonathan Troiano</title>
+
+    <!-- FAVICON     -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- My sheet -->
+    <link rel="stylesheet" href="my-styles.css">
+    <!-- TODO: Might want to import a Google font -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script type="text/javascript">
+      alert("This page is currently under construction and being added to &
+      improved daily.\nPlease enjoy!");
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Source for social media icons -->
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  </head>
+
+  <body>
+      <!-- TODO: Customize your colors! -->
+      <nav class="navbar
+                  navbar-expand-md
+                  navbar-light
+                  bg-light
+                  sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="img/logo-2.svg" height="100" width="200 "alt="Mon Companie!"></a>
+          <button class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <!-- ml-auto pushes navigation to the right when it's at full width -->
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Connect</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </nav>
+
+<!-- I M A G E   S L I D E R -->
+    <!-- IDEA: Might want to adjust the rate at which images change (faster.) -->
+    <div id="slides" class="carousel slide" data-ride="carousel">
+      <ul class="carousel-indicators">
+        <li data-target="#slides" data-slide-to="0"></li>
+        <li data-target="#slides" data-slide-to="1"></li>
+        <li data-target="#slides" data-slide-to="2"></li>
+      </ul>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/bg-1.jpg" alt="There's supposed to be an image here, Marty!">
+          <div class="carousel-caption">
+            <h1 class="display-2">My Work</h1>
+            <h3>Come take a look at what I've done!</h3>
+            <!-- Note that these don't have a name property included (it's default). -->
+            <button type="button" class="btm btn-outline-light btn-lg">GIT</button>
+            <button type="button" class="btn btn-primary btn-lg">YouTube</button>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/bg-2.jpg" alt="There's supposed to be an image here, Marty!">
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/bg-3.jpg" alt="There's supposed to be an image here, Marty!">
+        </div>
+
+      </div>
+    </div>
+
+
+<!-- J U M B O T R O N -->
+<div class="container-fluid">
+  <div class="row jumbotron">
+    <div class="col-xs-12
+                col-sm-12
+                col-md-9
+                col-lg-9
+                col-xl-10">
+      <p class="lead">Please join us beforehand for a light lunch we would also like to invite you
+        to other activities on the day, including the interim and closing panel
+        discussions on the intersection of businesses and social innovation, and
+        on building a stronger social innovation eco-system respectively and fire
+        up your browser, nor back of the net, but no scraps hit the floor flesh
+        that out.</p>
+    </div>
+    <div class="col-xs-12
+                col-sm-12
+                col-md-3
+                col-lg-3
+                col-xl-2">
+      <a href="#">
+        <button type="button" class="btn btn-outline-secondary btn-lg">ChzBrgr!?</button>
+      </a>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- W E L C O M E   S E C T I O N -->
+<div class="container-fluid padding">
+  <!-- TODO: Class welcome we will style later -->
+  <div class="row welcome text-center">
+    <div class="col-12 ">
+      <h1 class="display-4">Built with D (...znutz.)</h1>
+    </div>
+
+    <hr>
+    <div class="col-12">
+      <!-- TODO: Justify the text. -->
+      <p class="lead">Window of opportunity closing these latest prospects is like
+      putting socks on an octopus, a tentative event rundown is attached for your
+      reference, including other happenings on the day you are most welcome
+      to join us beforehand for a light lunch we would also like to invite you
+      to other activities on the day, including the interim and closing panel
+      discussions on the intersection of businesses and social innovation, and
+      on building a stronger social innovation eco-system respectively and fire
+      up your browser, nor back of the net, but no scraps hit the floor flesh
+      that out.</p>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!--- Three Column Section -->
+<div class="container-fluid padding">
+  <div class="row text-center padding">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <i class="fas fa-code"></i>
+      <h3>HTML5</h3>
+      <p>We need to leverage our synergies three-martini lunch!</p>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <i class="fas fa-bold"></i>
+      <h3>BOOTYSTRAP</h3>
+      <p>High performance keywords hire the best for you. Gotta smoke test!</p>
+    </div>
+
+    <div class="col-sm-12 col-md-4">
+      <i class="fab fa-css3"></i>
+      <h3>THE HIGH SEAS OF THREE</h3>
+      <p>Keep it lean, execute, but nail jelly to the hothouse!</p>
+    </div>
+
+  </div>
+  <hr class="my-4">
+</div>
+
+<!--- Two Column Section -->
+<div class="container-fluid padding">
+  <div class="row padding">
+    <div class="col-lg-6">
+      <h2>Can you make it pop? That's great...</h2>
+      <p> trust you there are more projects lined up charge extra the next time
+        I want you to take it to the next level. It looks a bit empty, try to
+        make everything bigger. Something summery; colourful the hair is just
+        too polarising, we exceed the clients' expectations do less with more
+        for it needs to be the same, but totally different , but I want you to
+        take it to the next level.</p>
+      <p>Try a more powerful colour can you make it look more designed make it
+        sexy i cant pay you , I got your invoice...it seems really high, why
+        did you charge so much can you make the font bigger?.</p>
+      <br>
+      <a class="btn btn-primary" href="#">Flavortown is near...</a>
+    </div>
+      <div class="col-lg-6">
+        <img src="http://unsplash.it/500/300" class="img-fluid" alt="The clams are sad, Jerry!">
+      </div>
+
+  </div>
+</div>
+
+<hr class="my-4">
+
+<!--- Fixed background -->
+<figure>
+  <div class="fixed-wrap">
+    <div id="fixed">
+
+    </div>
+  </div>
+</figure>
+
+<!--- Hidden Emoji Section -->
+<button class="fun" data-toggle="collapse" data-target="#emoji">Alright, I've decided I'd like to go to Flavortown.</button>
+<div id="emoji" class="collapse">
+  <div class="container-fluid padding">
+    <div class="row text-center">
+      <div class="col-sm-6 col-md-3">
+        <img class="gif" src="img/guy-fieri-rev-slurp.gif" alt="It appears we've come here. Ah shit.">
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <img class="gif" src="img/two-panel-winnie-meme.gif" alt="It appears we've come here. Ah shit.">
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <img class="gif" src="img/sf2-ken-neutral.gif" alt="It appears we've come here. Ah shit.">
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <img class="gif" src="img/meme-squidward++.gif" alt="It appears we've come here. Ah shit.">
+      </div>
+    </div>
+  </div>
+</div>
+<!--- Meet the team -->
+<div class="container-fluid padding">
+  <div class="row welcome text-center">
+    <div class="col-12">
+      <h1 class="display-4">Meet The Team</h1>
+      <hr>
+    </div>
+  </div>
+</div>
+
+<!--- Cards -->
+<div class="container-fluid padding">
+  <div class="row padding">
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="img/harold-1.jpeg" alt="Harold!">
+        <div class="card-body">
+          <h4 class="card-title">Harold</h4>
+          <p class="card-text">If you could do that, that would be great. Level the playing field
+            a set of certitudes based on deductions founded on false premise and
+            hire the best so we have to leverage up the messaging.</p>
+          <a href="#" class="btn btn-outline-secondary">Hide Pain</a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="img/harold-2.jpeg" alt="Harold!">
+        <div class="card-body">
+          <h4 class="card-title">Jim</h4>
+          <p class="card-text">T-shaped individual UX, but what do you feel you
+            would bring to the table if you were hired for this position please
+            advise soonest.</p>
+          <a href="#" class="btn btn-outline-secondary">Hide Pain</a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="img/harold-3.jpg" alt="Harold!">
+        <div class="card-body">
+          <h4 class="card-title">Esther</h4>
+          <p class="card-text">Make sure to include in your wheelhouse low
+            engagement nor do i have consent to record this meeting and roll
+            back strategy so powerPointless.</p>
+          <a href="#" class="btn btn-outline-secondary">Hide Pain</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!--- Two Column Section -->
+<div class="container-fluid padding">
+  <div class="row padding">
+    <div class="col-lg-6">
+      <h2>Focus on the customer journey...</h2>
+      <p>This vendor is incompetent so the closest elephant is the most dangerous
+        we're ahead of the curve on that one. Cannibalize we need more paper pull
+        in ten extra bodies to help roll the tortoise. We need to build it so
+        that it scales throughput, nor can you put it on my calendar? </p>
+       <p>Minimize backwards overflow waste of resources, so helicopter view,
+         back of the net organic growth teams were able to drive adoption and
+         awareness. Can you ballpark the cost per unit for me show pony streamline
+         the right info at the right time to the right people, loop back.</p>
+    </div>
+    <div class="col-lg-6">
+      <!-- TODO: Shouldn't I redefine the Bootstrap class for this to resize to a set size? -->
+      <img src="img/bench-fall-park-rest-40884.jpeg"
+           class="img-fluid"
+           style="width: 500px; height: 300px"
+           alt="The clams are sad, Jerry!">
+    </div>
+  </div>
+  <hr class="my-4">
+</div>
+
+<!--- Connect -->
+<div class="container-fluid padding">
+  <div class="row text-center padding">
+    <div class="col-12">
+      <h2>Connect</h2>
+
+
+    </div>
+    <div class="col-12 social padding">
+      <a href="https://github.com/jjtroiano0272">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.youtube.com/channel/UCy-_Q3UO3KjKQWTYhaWgeww">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/jonathan-troiano/">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <!-- TODO: Ziprecruiter -->
+      <!-- TODO: DICE.org -->
+    </div>
+
+  </div>
+
+</div>
+
+<!--- Footer -->
+<footer>
+  <div class="container-fluid padding">
+    <div class="row text-center">
+      <div class="col-md-4">
+        <img src="img/logo-2.svg" alt="Mon companie!">
+        <hr class="light">
+        <p>Phone</p>
+        <p>Buttery Males</p>
+        <p>Street</p>
+        <p>538 Sea of Tranquility, The Moon</p>
+      </div>
+
+      <div class="col-md-4">
+        <hr class="light">
+        <h5>Who Are You!?</h5>
+        <hr class="light">
+        <p>Monday: Dead</p>
+        <p>Tuesday: Is a day!?</p>
+        <p>Okay jk we're back!</p>
+        <p>538 Sea of Tranquility, The Moon</p>
+      </div>
+
+      <div class="col-md-4">
+        <hr class="light">
+        <h5>Service Area</h5>
+        <hr class="light">
+        <p>Here</p>
+        <p>There</p>
+        <p>Big Bank Hank is Everywhere!</p>
+      </div>
+
+      <div class="col-12">
+        <hr class="light-100">
+        <h5>&copy;Jonathan Troiano 2021</h5>
+
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
