@@ -1,7 +1,7 @@
 /* OrbitControls allows us to pan around the scene with our controller (mouse/finger) */
-import './css/style.css';
-import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import "./css/style.css";
+import * as THREE from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 // Think of a scene as a container
 const scene = new THREE.Scene();
@@ -12,7 +12,7 @@ const camera = new THREE.PerspectiveCamera(
 /* This was all math until now. The renderer object renders the actual graphics to see.
 renderer needs to know which DOM elements to use to render graphics upon */
 const renderer = new THREE.WebGLRenderer({
-    canvas: document.querySelector('#bg'),
+    canvas: document.querySelector("#bg"),
 });
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -56,18 +56,18 @@ function addStar () {
 
 // Add 200 stars & set an external image as background
 Array(200).fill().forEach(addStar);
-const spaceTexture = new THREE.TextureLoader().load('img/space.jpg');
+const spaceTexture = new THREE.TextureLoader().load("img/space.jpg");
 scene.background = spaceTexture;
 
-const jonTexture = new THREE.TextureLoader().load('./img/IMG_7268.jpg');
+const jonTexture = new THREE.TextureLoader().load("./img/IMG_7268.jpg");
 const jon = new THREE.Mesh(
     new THREE.BoxGeometry(3, 3, 3),
     new THREE.MeshBasicMaterial({ map: jonTexture })
 );
 scene.add(jon);
 
-const moonTexture = new THREE.TextureLoader().load('./img/moon_texture.jpg');
-const normalTexture = new THREE.TextureLoader().load('./img/normal.jpg');
+const moonTexture = new THREE.TextureLoader().load("./img/moon_texture.jpg");
+const normalTexture = new THREE.TextureLoader().load("./img/normal.jpg");
 const moon = new THREE.Mesh(
     new THREE.SphereGeometry(3, 32, 32),
     new THREE.MeshStandardMaterial({

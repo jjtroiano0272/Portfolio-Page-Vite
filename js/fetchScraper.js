@@ -77,32 +77,5 @@ const getGartner = async (url) => {
 
     await browser.close();
 }
-        
-{
-/* (async () => {
-	const url = new URL('https://some-url.com');
-	const params = { param: 'test'};
-	const queryParams = new URLSearchParams(params).toString();
-	url.search = queryParams;
-	
-	const fetchOptions = {
-		method: 'POST',
-		headers: { 'cookie': '<cookie>', },
-		body: JSON.string({ hello: 'world' }),
-	};
 
-	await fetch(url, fetchOptions);
-})();
-
-
-const newProductsPagePromise = fetch('https://some-website.com/new-products');
-const recommendedProductsPagePromise = fetch('https://some-website.com/recommended-products');
-
-// Returns a promise that resolves to a list of the results
-Promise.all([
-    newProductsPagePromise, 
-    recommendedProductsPagePromise
-]);  */ }
-
-// getReddit();
 getGartner('https://jobs.gartner.com/category/technology-jobs/494/58617/1');
