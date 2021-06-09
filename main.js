@@ -1,7 +1,7 @@
 /* OrbitControls allows us to pan around the scene with our controller (mouse/finger) */
-import "./css/style.css";
-import * as THREE from "three";
-// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import './style.css';
+import * as THREE from 'three';
+import { OrbitControls } from '@/node_modules/three/examples/jsm/controls/OrbitControls'
 
 // Think of a scene as a container
 const scene = new THREE.Scene();
