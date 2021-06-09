@@ -6,15 +6,19 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview" },
+    "serve": "vite preview"
+  },
   "devDependencies": {
-    "vite": "^2.3.7" },
+    "vite": "^2.3.7"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jjtroiano0272/Portfolio-Page-Vite.git" },
+    "url": "git+https://github.com/jjtroiano0272/Portfolio-Page-Vite.git"
+  },
   "author": "Jonathan J. Troiano",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jjtroiano0272/Portfolio-Page-Vite/issues"},
+    "url": "https://github.com/jjtroiano0272/Portfolio-Page-Vite/issues"
+  },
   "homepage": "https://github.com/jjtroiano0272/Portfolio-Page-Vite#readme"
 }
