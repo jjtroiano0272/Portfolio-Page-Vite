@@ -1,6 +1,6 @@
-/* Following along with 
+/* Following along with
    https://www.scrapingbee.com/blog/node-fetch/
-   STARTED: 07 MAY 2021 */
+   STARTED: 07 MAY 2021
 
 const fetch = require('node-fetch');
 const load = require('cheerio');
