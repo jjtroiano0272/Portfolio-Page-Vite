@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "config": "vite --config my-config.js"
   },
   "devDependencies": {
     "three": "^0.129.0",
