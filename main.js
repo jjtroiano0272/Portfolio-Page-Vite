@@ -1,16 +1,7 @@
 /* OrbitControls allows us to pan around the scene with our controller (mouse/finger) */
 import './style.css';
 import * as THREE from 'three';
-import { OrbitControls } from './node_modules/three/examples/jsm/controls/OrbitControls'
-
-/* Loading bar for displaying load progress of assets.
-Courtesy user { Fyrestar, Aug 2017 } at 
-https://discourse.threejs.org/t/display-progress-bar-till-3d-model-gets-loaded-fully/699 */
-var manager = new THREE.LoadingManager();
-manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
-    progressElement.style.width = (itemsLoaded / itemsTotal * 100) + '%';
-};
-var Loaders = { Texture: new THREE.TextureLoader(manager) }
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 // Think of a scene as a container
 const scene = new THREE.Scene();

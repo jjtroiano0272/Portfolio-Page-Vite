@@ -89,3 +89,18 @@ blockquote p {
 .left {
   grid-column: 6 / 12;
 }
+
+/* Added as part of https://help.designmodo.com/article/startup-page-scroll-progress-bar/ */
+.progress-container {
+  width: 100%;
+  background-color: transparent;
+  height: 5px;
+  display: block;
+}
+
+.progress-bar {
+  background-color: red;
+  width: 0%;
+  display: block;
+  height: inherit;
+}
