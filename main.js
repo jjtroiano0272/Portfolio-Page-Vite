@@ -6,18 +6,34 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 // Think of a scene as a container
 const scene = new THREE.Scene();
 // PerspectiveCamera mimicks what human eyeballs see
-const camera = new THREE.PerspectiveCamera(
-    75, window.innerWidth / window.innerHeight, 0.1, 1000
-);
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+const sizes = {
+    width: window.innerWidth,
+    height: window.innerHeight
+}
+
+/* Boilerplate stuff */
+window.addEventListener('resize', () => {
+    // Update sizes
+    sizes.width = window.innerWidth;
+    sizes.height = window.innerHeight;
+
+    // Update camera
+    camera.aspect = sizes.width / sizes.height;
+    camera.updateProjectionMatrix();
+    
+    // Update renderer
+    renderer.setSize(sizes.width, sizes.height);
+    render.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+})
+
 /* This was all math until now. The renderer object renders the actual graphics to see.
 renderer needs to know which DOM elements to use to render graphics upon */
-const renderer = new THREE.WebGLRenderer({
-    canvas: document.querySelector('#bg'),
-});
+const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('#bg') });
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 camera.position.setZ(30);
-
 renderer.render(scene, camera);
 
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
@@ -32,9 +48,8 @@ const torus = new THREE.Mesh(geometry, material);
 scene.add(torus);
 
 const pointLight = new THREE.PointLight(0xFFFFF);
-const ambientLight = new THREE.AmbientLight(0xFFFFFF);
 pointLight.position.set(5,5, 5);
-
+const ambientLight = new THREE.AmbientLight(0xFFFFFF);
 scene.add(pointLight, ambientLight);
 
 // Adds indicators for each, which are normally hidden!
@@ -53,18 +68,20 @@ function addStar () {
     star.position.set(x, y, z);
     scene.add(star);
 }
-
 // Add 200 stars & set an external image as background
 Array(200).fill().forEach(addStar);
+
 const spaceTexture = new THREE.TextureLoader().load('./img/space.jpg');
 scene.background = spaceTexture;
 
-const jonTexture = new THREE.TextureLoader().load('./img/IMG_7268.jpg');
-const jon = new THREE.Mesh(
+const profileCubeTexture = new THREE.TextureLoader().load('./img/IMG_7268.jpg');
+const profileCube = new THREE.Mesh(
     new THREE.BoxGeometry(3, 3, 3),
-    new THREE.MeshBasicMaterial({ map: jonTexture })
+    new THREE.MeshBasicMaterial({ map: profileCubeTexture })
 );
-scene.add(jon);
+scene.add(profileCube);
+profileCube.position.z = -5;
+profileCube.position.x = 2;
 
 const moonTexture = new THREE.TextureLoader().load('./img/moon_texture.jpg');
 const normalTexture = new THREE.TextureLoader().load('./img/normal.jpg');
@@ -76,22 +93,20 @@ const moon = new THREE.Mesh(
     })
 );
 scene.add(moon);
-
+// Placing objects in the scene
 moon.position.z = 30;
 moon.position.setX(-10);
 
-jon.position.z = -5;
-jon.position.x = 2;
 
-// Scroll animation
+// Animations that happen when you scroll
 function moveCamera() {
     const t = document.body.getBoundingClientRect().top;
     moon.rotation.x += 0.0050;
     moon.rotation.y += 0.0075;
     moon.rotation.z += 0.0050;
 
-    jon.rotation.y += 0.010;
-    jon.rotation.z += 0.010;
+    profileCube.rotation.y += 0.010;
+    profileCube.rotation.z += 0.010;
 
     camera.position.z = t * -0.0100;
     camera.position.x = t * -0.0002;
@@ -102,7 +117,6 @@ I don't know why referencing the moveCamera function as a var lets it work. */
 document.body.onscroll = moveCamera;
 moveCamera();
 
-
 // Recursive animation loop, works like a Game Loop
 function animate() {
     requestAnimationFrame(animate);
@@ -110,7 +124,12 @@ function animate() {
     torus.rotation.y += 0.005;
     torus.rotation.z += 0.010;
 
+    // profile cube moves at rest
+    profileCube.rotation.x += 0.00040;
+    profileCube.rotation.y += 0.00008;
+
     moon.rotation.x += 0.005;
+    moon.rotation.y += 0.003;
 
     // So whenever the browser repaints the screen it calls the render method to update UI
     renderer.render(scene, camera);
