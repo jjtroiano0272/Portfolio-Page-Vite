@@ -18,7 +18,7 @@ canvas {
 
 
 :root {
-  --dark-bg: rgba(15, 15, 15, 0.95);
+  --dark-bg: rgba(15, 15, 15, 0.85);
   --spacing: 350px;
 
   font-family: brandon-grotesque, sans-serif;
@@ -29,13 +29,24 @@ canvas {
 /* This is the Root Parent element */
 main {
   width: 100vw;
+  /* color: white; */
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 120px 0px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.three-js-main {
+  width: 100vw;
   color: white;
   z-index: 99;
   position: absolute;
   width: 100%;
   margin: 0px auto;
   padding: 120px 0px;
-  
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
@@ -51,8 +62,6 @@ canvas {
   top: 0;
   left: 0;
 }
-
-
 
 header {
   background: var(--dark-bg);
@@ -88,4 +97,8 @@ blockquote p {
 
 .left {
   grid-column: 6 / 12;
+}
+
+.certification-badge {
+  max-width: 15rem;
 }

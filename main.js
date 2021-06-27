@@ -106,8 +106,8 @@ function moveCamera() {
     moon.rotation.y += 0.0075;
     moon.rotation.z += 0.0050;
 
-    profileCube.rotation.y += 0.010;
-    profileCube.rotation.z += 0.010;
+    profileCube.rotation.y += 0.005;
+    profileCube.rotation.z += 0.005;
 
     camera.position.z = t * -0.0100;
     camera.position.x = t * -0.0002;
@@ -125,8 +125,8 @@ function animate() {
     torus.rotation.y += 0.005;
     torus.rotation.z += 0.010;
 
-    // profile cube moves at rest
-    profileCube.rotation.x += 0.00040;
+    // profile cube slowly rotates by default
+    profileCube.rotation.x -= 0.00040;
     profileCube.rotation.y += 0.00008;
 
     moon.rotation.x += 0.005;
