@@ -6,7 +6,7 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="./style.css" rel="stylesheet" />
+  <link href="./styles.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/v4-shims.css">
@@ -18,10 +18,11 @@
   <!-- Shows the actual ThreeJS -->
   <canvas id="bg"></canvas>
 
-  <main class="text-light">
+  <!-- <main class="text-light"> -->
     
     <!-- FIXME: causing problems because it interacts with bootstrap classes -->
-    <header class="col-xl-6"> 
+    <!-- FIXME: Bring this back online in case pending changes fail. -->
+    <!-- <header"> 
       <h1>Jonathan J. Troiano</h1>
       <p>IT Professional, Web Developer</p>
     </header>
@@ -48,15 +49,6 @@
         YouTube page, where I upload the music I've been making.</p>
     </section>
 
-    <!-- <section>
-      <h2 class="text-center">Certifications</h2>
-      <div class="col-xl-12">
-        <div class="row">
-          <img class="certification-badge" src="https://images.credly.com/images/68468004-5a85-4f3b-bc58-590773979486/AWS-CloudPractitioner-2020.png" alt="AWS Cloud Certified Professional">
-          <img class="certification-badge" src="https://education.oracle.com/file/general/Oracle-Certification-badge_OC-JuniorAssociate.png" alt="Oracle Certified Junior Associate">
-        </div>
-      </div>
-    </section> -->
     <div class="container">
       <div class="col-xl-12">
         <div class="row">
@@ -69,7 +61,6 @@
       </div>
     </div>
     
-    
     <section>
       <h2 class="text-center">Technologies</h2>
       <div class="col-xl-12 align-items-center">
@@ -79,13 +70,16 @@
       </div>
     </section>
 
-    <section>
-      <h2>Projects</h2>
-
-      <p>This site</p>
-      <p>Jules' Site</p>
-      <p>My first Bootstrap site</p>
-    </section>
+    <div class="row">
+      <div class="col-md-12">
+        <section>
+          <h2>Projects</h2>
+          <p>This site</p>
+          <p>Jules' Site</p>
+          <p>My first Bootstrap site</p>
+        </section>
+      </div>
+    </div>
 
     <blockquote>Some inspo stuff here<br>-me</blockquote>
 
@@ -133,7 +127,140 @@
 
     <blockquote>Thanks for watching!</blockquote>
     
-  </main>
+  </main> -->
+
+  <!-- FIXME: WORKING COPY -->
+  <main class="text-light three-js-main">
+    <div class="container">
+    
+      <div class="row">
+        <div class="col-xl-5">
+          <!-- <header>
+            <h1>Jonathan J. Troiano</h1>
+            <p>IT Professional, Web Developer</p>
+          </header> -->
+          
+          <h1>Jonathan J. Troiano</h1>
+          <p>IT Professional, Web Developer</p>
+        </div>
+      </div>
+    
+      
+      <div class="row">
+        <div class="col-xl-12 align-content-center">
+          <blockquote class="blockquote">
+            <p class="text-center">Now looking for work in Front End & Software Development!</p>
+          </blockquote>
+        </div>
+      </div>
+
+      <section>
+        <h2>Welcome</h2>
+        <p>First off I'd like to welcome you to my website, a project I decided
+          to do to serve as my portfolio for any company looking to hire me. I've
+          showcased my skills and previous projets here so you can get an idea of
+          what I can do! I've included links to my GitHub page as well as my
+          YouTube page, where I upload the music I've been making.</p>
+      </section>
+
+      <div class="row text-center">
+        <div class="col-xl-6">
+          <section>
+            <h2 class="text-center">Certifications</h2>
+            <img class="certification-badge" src="https://images.credly.com/images/68468004-5a85-4f3b-bc58-590773979486/AWS-CloudPractitioner-2020.png" alt="AWS Cloud Certified Professional">
+            <img class="certification-badge" src="https://education.oracle.com/file/general/Oracle-Certification-badge_OC-JuniorAssociate.png" alt="Oracle Certified Junior Associate">
+          </section>
+        </div>
+      <!-- </div> -->
+    
+        <div class="col-xl-6">
+          <section>
+            <h2 class="text-center">Technologies</h2>
+              <img class="certification-badge" src="./public/img/nodejs-new-pantone-white.svg" alt="Node.js">
+          </section>
+        </div>
+      </div>
+      
+      
+      <div class="row align-content-center">
+        <div class="col-6">
+          <section>
+            <h2>Projects</h2>
+            <!-- TODO: These will be treated as ul with icons as CloudFlare image (or other hosting provi.) -->
+            <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-action active">
+                This site
+              </a>
+              <a href="https://58c79bb9.tutorial-particlesystem.pages.dev"
+                 class="list-group-item list-group-item-action">
+                    Particle System Visualization
+              </a>
+              <a href="#"
+                 class="list-group-item list-group-item-action">
+                    Nebula Visualization
+              </a>
+              <a href="#"
+                 class="list-group-item list-group-item-action disabled">
+                    My first Bootstrap site
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-12 text-center">
+          <blockquote class="blockquote">Some inspo stuff here<br>-me</blockquote>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-12">
+          <section>
+            <h1 class="text-center">Work History</h1>
+
+            <h3>21st Century Technology</h3>
+            <h4 class="text-muted">IT Technician</h4>
+            <h5 class="text-muted">Estero, FL</h5>
+            <p>In this role I worked as one half of a two-man team in which I scheduled
+              appointments with clients to troubleshoot computer issues, everything from
+              help in using an unfamiliar program to Operating System installations, data
+              recovery, use lessons, to installing a home doorbell & camera system.
+              Appointments with clients were solo one-on-one jobs, interpreting a
+              layperson’s distress into actionable IT solutions. I was laid off from
+              this position due to the start of the COVID-19 pandemic whhen work dried up.</p>
+            <h3>Gartner, Inc</h3>
+            <h4 class="text-muted">Master Data Management Intern</h4>
+            <h5 class="text-muted">Stamford, CT</h5>
+            <p>During the summer of 2019 (May to August) I worked at the Gartner
+              Headquarters in Stamford, CT 30 minutes from New York City. Here I
+              worked as part of a team where we managed database connections and
+              curated the data that we would query from multiple sources, creating
+              health checks on our data. Here I developed an automated process
+              for querying databases and summarizing that data output as a mass
+              email to the other members of our department providing them a snapshot
+              of how the accounts we manage were performing and which accounts (out
+              of more than 750,000 managed accounts) may have needed further attention
+              (e.g. if account details were only partially filled in or had duplicate
+              entries). We used this data as a basis for creating a browser-accessible
+              report (dashboard) in Microsoft Power BI.</p>
+            <h3>Florida Gulf Coast University</h3>
+            <h4 class="text-muted">Camp Counselor</h4>
+            <h5 class="text-muted">Estero, FL</h5>
+            <p>I worked as both a tutor & Learning Assistant for other students during
+              the semester and a camp counselor during the summer at FGCU. As an LA I
+              assisted students with comprehending course material in real-time, grading
+              assignments for classes with 30-50 students. Courses included: Introduction
+              to Computer Science & Introduction to Programming. During the summer of
+              2017 I worked as a camp counselor for the Coding Academy, STEM Academy, and
+              Mathletes camps.</p>
+          </section>
+        </div>
+      </div>
+    
+  </div>
+
+</main>
 
   <script type="module" src="./main.js"></script>
 </body>

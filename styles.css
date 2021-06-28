@@ -10,45 +10,21 @@
   margin-top: 60px;
 }
 
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
 
 
 :root {
   --dark-bg: rgba(15, 15, 15, 0.85);
   --spacing: 350px;
-
+  
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-/* This is the Root Parent element */
-main {
-  width: 100vw;
-  /* color: white; */
-  z-index: 99;
-  position: absolute;
-  width: 100%;
-  margin: 0px auto;
-  padding: 120px 0px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
-
-.three-js-main {
-  width: 100vw;
-  color: white;
-  z-index: 99;
-  position: absolute;
-  width: 100%;
-  margin: 0px auto;
-  padding: 120px 0px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 h1, h2, h3, blockquote {
@@ -101,4 +77,18 @@ blockquote p {
 
 .certification-badge {
   max-width: 15rem;
+}
+
+/* Currently required for scene to render to page and keep measurements! */
+.three-js-main {
+  width: 100vw;
+  width: 100%;
+  color: white;
+  z-index: 99;
+  /* This is the rule that ensures scroll behavior happens. */
+  position: absolute; 
+  margin: 0px auto;
+  padding: 120px 0px;
+  /* display: grid; */
+  /* grid-template-columns: repeat(12, 1fr); */
 }
