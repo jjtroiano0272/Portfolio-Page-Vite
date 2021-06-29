@@ -1,17 +1,6 @@
 /* TODO: What's this guy for!? */
 @import url("https://use.typekit.net/jmk3xov.css");
 
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
-
-
 :root {
   --dark-bg: rgba(15, 15, 15, 0.85);
   --spacing: 350px;
@@ -91,4 +80,25 @@ blockquote p {
   padding: 120px 0px;
   /* display: grid; */
   /* grid-template-columns: repeat(12, 1fr); */
+}
+
+.primary-h1 {
+  font-size: 5rem;
+}
+
+.my-section {
+  /* grid-column: 2 / 8; */
+  /* padding: 1rem; */
+  background: var(--dark-bg);
+  /* font-size: 1.25rem; */
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
+}
+
+.secondary-h3 h3 {
+  font-weight: 100;
+}
+
+hr {
+  background-color: aliceblue;
 }

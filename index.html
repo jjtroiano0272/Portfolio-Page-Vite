@@ -29,8 +29,6 @@
 <body>
   <!-- Shows the actual ThreeJS -->
   <canvas id="bg"></canvas>
-
-  <!-- <main class="text-light"> -->
     
     <!-- FIXME: causing problems because it interacts with bootstrap classes -->
     <!-- FIXME: Bring this back online in case pending changes fail. -->
@@ -146,34 +144,37 @@
     <div class="container">
     
       <div class="row">
-        <div class="col-xl-5">
+        <div class="col-xl-5 my-section">
           <!-- <header>
             <h1>Jonathan J. Troiano</h1>
             <p>IT Professional, Web Developer</p>
           </header> -->
-          
-          <h1>Jonathan J. Troiano</h1>
-          <p>IT Professional, Web Developer</p>
+          <h1 class="primary-h1">Jonathan J. Troiano</h1>
+          <h3 class="secondary-h3">IT Professional, Web Developer</h3>
         </div>
       </div>
-    
       
       <div class="row">
-        <div class="col-xl-12 align-content-center">
+        <div class="col col-xs-12 align-content-center text-center">
           <blockquote class="blockquote">
-            <p class="text-center">Now looking for work in Front End & Software Development!</p>
+            <p>Now looking for work in Front End & Software Development!</p>
           </blockquote>
         </div>
       </div>
 
-      <section>
-        <h2>Welcome</h2>
-        <p>First off I'd like to welcome you to my website, a project I decided
-          to do to serve as my portfolio for any company looking to hire me. I've
-          showcased my skills and previous projets here so you can get an idea of
-          what I can do! I've included links to my GitHub page as well as my
-          YouTube page, where I upload the music I've been making.</p>
-      </section>
+      <div class="row text-center">
+        <div class="col-xs-12 col-lg-10">
+          <!-- FIXME: Center on all screens, but take up 8-10 col on bigger screens, with larger text -->
+          <section>
+            <h2>Welcome</h2>
+            <p>First off I'd like to welcome you to my website, a project I decided
+              to do to serve as my portfolio for any company looking to hire me. I've
+              showcased my skills and previous projets here so you can get an idea of
+              what I can do! I've included links to my GitHub page as well as my
+              YouTube page, where I upload the music I've been making.</p>
+          </section>
+        </div>
+      </div>
 
       <div class="row text-center">
         <div class="col-xl-6">
@@ -195,9 +196,9 @@
       
       
       <div class="row align-content-center">
-        <div class="col-6">
+        <div class="col-lg-6 col-xs-12">
           <section>
-            <h2>Projects</h2>
+            <h2 class="text-center">Projects</h2>
             <!-- TODO: These will be treated as ul with icons as CloudFlare image (or other hosting provi.) -->
             <div class="list-group">
               <a href="#" class="list-group-item list-group-item-action active">
@@ -221,8 +222,8 @@
       </div>
 
       <div class="row">
-        <div class="col-xl-12 text-center">
-          <blockquote class="blockquote">Some inspo stuff here<br>-me</blockquote>
+        <div class="col-12 text-center">
+          <blockquote class="blockquote">Some inspo stuff here<br><i class="text-muted">-me</i></blockquote>
         </div>
       </div>
 
@@ -230,6 +231,7 @@
         <div class="col-xl-12">
           <section>
             <h1 class="text-center">Work History</h1>
+            <hr class="my-4">
 
             <h3>21st Century Technology</h3>
             <h4 class="text-muted">IT Technician</h4>
