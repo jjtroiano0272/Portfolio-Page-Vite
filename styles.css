@@ -16,17 +16,26 @@ canvas {
   left: 0;
 }
 
+/* Currently required for scene to render to page and keep measurements! */
+main {
+  width: 100vw;
+  width: 100%;
+  /* color: white; */
+  z-index: 99;
+  /* This is the rule that ensures scroll behavior happens. */
+  position: absolute; 
+  margin: 0px auto;
+  padding: 120px 0px;
+  /* display: grid; */
+  /* grid-template-columns: repeat(12, 1fr); */
+}
+
 h1, h2, h3, blockquote {
   font-family: elevon, sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
 
 header {
   background: var(--dark-bg);
@@ -45,20 +54,24 @@ section {
   margin-bottom: var(--spacing);
 }
 
-blockquote {
+hr {
+  background-color: aliceblue;
+}
+
+/* cblockquote {
   margin: 0;
   padding: 0;
   grid-column: 2 / span 9;
   margin-bottom: var(--spacing);
 }
 
-blockquote p {
+cblockquote p {
   color: black;
   background-color: white;
   font-size: 4rem;
   display: inline;
   line-height: 1;
-}
+} */
 
 .left {
   grid-column: 6 / 12;
@@ -68,22 +81,27 @@ blockquote p {
   max-width: 15rem;
 }
 
-/* Currently required for scene to render to page and keep measurements! */
-.three-js-main {
-  width: 100vw;
-  width: 100%;
-  color: white;
-  z-index: 99;
-  /* This is the rule that ensures scroll behavior happens. */
-  position: absolute; 
-  margin: 0px auto;
-  padding: 120px 0px;
-  /* display: grid; */
-  /* grid-template-columns: repeat(12, 1fr); */
+.certification-badge-light {
+  max-width: 15rem;
+  background-color: white;
 }
 
-.primary-h1 {
-  font-size: 5rem;
+.certification-badge-express {
+  font-family: 'Open Sans', sans-serif;
+  background-color: azure;
+  padding: 1.8rem;
+}
+
+.invert-colors {
+  filter: invert(1);
+}
+
+.opacity-x {
+  opacity: 80%;
+}
+
+.list-group-item-dark {
+  background: var(--dark-bg);
 }
 
 .my-section {
@@ -95,10 +113,26 @@ blockquote p {
   margin-bottom: var(--spacing);
 }
 
+.my-blockquote {
+  font-family: elevon, sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  font-style: normal;
+  overflow-wrap: normal;
+  display: inline;
+  margin-bottom: var(--spacing);
+}
+
+.primary-h1 {
+  font-size: 5rem;
+}
+
 .secondary-h3 h3 {
   font-weight: 100;
 }
 
-hr {
-  background-color: aliceblue;
+@media (max-width: 768px) {
+  .header-xs {
+    padding: 2rem 0;
+  }
 }
