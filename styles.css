@@ -77,19 +77,26 @@ cblockquote p {
   grid-column: 6 / 12;
 }
 
-.certification-badge {
-  max-width: 15rem;
+.cert-badge {
+  width: 10rem;
+  /* max-width: 15rem; */
+  margin: 1rem 0.2rem;
 }
 
-.certification-badge-light {
+.cert-badge-light {
   max-width: 15rem;
   background-color: white;
 }
 
-.certification-badge-express {
+.cert-badge-text {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 0.5rem;
   font-family: 'Open Sans', sans-serif;
   background-color: azure;
   padding: 1.8rem;
+  align-content: center;
+  display: flex;
 }
 
 .invert-colors {
@@ -134,5 +141,13 @@ cblockquote p {
 @media (max-width: 768px) {
   .header-xs {
     padding: 2rem 0;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .header-md {
+    /* padding: 2rem 0; */
+    
   }
 }
