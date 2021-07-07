@@ -3,11 +3,13 @@
 
 :root {
   --dark-bg: rgba(15, 15, 15, 0.85);
+  --light-bg: rgba(255, 255, 255, 0.90);
   --spacing: 350px;
   
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 16px;
 }
 
 canvas {
@@ -30,20 +32,44 @@ main {
   /* grid-template-columns: repeat(12, 1fr); */
 }
 
-h1, h2, h3, blockquote {
+/* Font styling for main elements */
+h1, 
+h2, 
+h3, 
+h4, 
+blockquote {
   font-family: elevon, sans-serif;
-  font-weight: 700;
+  font-weight: 400;
+  font-size: 2.5rem;
   font-style: normal;
 }
 
+p {
+  font-size: 1.4rem;
+  font-family: 'Raleway', sans-serif;
+}
 
-header {
+.font-encode-thin p, a {
+  font-family: 'Encode Sans SC', sans-serif;
+}
+
+.font-raleway-thin {
+  font-family: 'Raleway', sans-serif;
+}
+
+.font-elevon-bold {
+  font-family: elevon, sans-serif;
+  font-weight: 700;
+}
+
+
+/* header {
   background: var(--dark-bg);
   grid-column: 2 / span 5;
   font-size: 2.5rem;
   padding: 2rem;
   margin-bottom: var(--spacing);
-}
+} */
 
 section {
   grid-column: 2 / 8;
@@ -54,18 +80,35 @@ section {
   margin-bottom: var(--spacing);
 }
 
+.my-section-1 {
+  /* grid-column: 2 / 8; */
+  /* padding: 1rem; */
+  /* font-size: 1.25rem; */
+  line-height: 1.5;
+  /* margin-bottom: var(--spacing); */
+  margin-bottom: calc( var(--spacing)*1.2 );
+}
+
+.my-bg-dark {
+  background: var(--dark-bg);
+}
+
+.my-bg-light {
+  background: var(--light-bg);
+}
+
 hr {
   background-color: aliceblue;
 }
 
-/* cblockquote {
+/* blockquote {
   margin: 0;
   padding: 0;
   grid-column: 2 / span 9;
   margin-bottom: var(--spacing);
 }
 
-cblockquote p {
+blockquote p {
   color: black;
   background-color: white;
   font-size: 4rem;
@@ -79,7 +122,7 @@ cblockquote p {
 
 .cert-badge {
   width: 10rem;
-  /* max-width: 15rem; */
+  min-height: 100%;
   margin: 1rem 0.2rem;
 }
 
@@ -111,24 +154,26 @@ cblockquote p {
   background: var(--dark-bg);
 }
 
-.my-section {
-  /* grid-column: 2 / 8; */
-  /* padding: 1rem; */
-  background: var(--dark-bg);
-  /* font-size: 1.25rem; */
-  line-height: 1.5;
+
+
+.my-blockquote {
+  font-style: normal;
+  /* display: inline; */
+  overflow-wrap: break-word;
   margin-bottom: var(--spacing);
 }
 
-.my-blockquote {
-  font-family: elevon, sans-serif;
-  font-weight: 400;
-  font-size: 2.5rem;
-  font-style: normal;
-  overflow-wrap: normal;
-  display: inline;
-  margin-bottom: var(--spacing);
+.mb-6 {
+  margin-bottom: 18rem !important;
 }
+
+/* .my-blockquote p {
+  color: black;
+  background-color: white;
+  font-size: 4rem;
+  display: inline;
+  line-height: 1;
+} */
 
 .primary-h1 {
   font-size: 5rem;
@@ -136,6 +181,11 @@ cblockquote p {
 
 .secondary-h3 h3 {
   font-weight: 100;
+}
+
+.social-link {
+  color: white;
+  opacity: 85%;
 }
 
 @media (max-width: 768px) {

@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/jjtroiano0272/Portfolio-Page-Vite/issues"
   },
-  "homepage": "https://github.com/jjtroiano0272/Portfolio-Page-Vite#readme"
+  "homepage": "https://github.com/jjtroiano0272/Portfolio-Page-Vite#readme",
+  "dependencies": {
+    "bootstrap-icons": "^1.5.0"
+  }
 }
