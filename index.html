@@ -74,6 +74,7 @@
         </div>
       </div>
 
+      <!-- One row with two columns on desktop, but one row with one column on mobile. -->
       <div class="row text-center">
         <div class="col-xs-12 col-sm-12 col-lg-6">
           <section>
@@ -85,18 +86,29 @@
         <!-- </div> -->
         
         <!-- *** Technologies -->
+        <!-- Each div.row holds 2 items on ALL size screens. -->
         <div class="col-lg-6">
           <section>
             <h2 class="text-center mb-5">Technologies</h2>
-            <img class="cert-badge" src="./public/img/logos/nodejs-new-pantone-white.svg" alt="Node.js">
-            <img class="cert-badge invert-colors" src="./public/img/logos/three-js-logo.png" alt="Three.js">
-            <img class="cert-badge" src="./public/img/logos/bootstrap-logo.svg" alt="Bootstrap">
-            <img class="cert-badge" src="./public/img/logos/puppeteer-logo.png" alt="Puppeteer">
-            <img class="cert-badge" src="./public/img/logos/vite-logo.svg" alt="Vite">
-            <img class="cert-badge" src="./public/img/logos/angular-logo.svg" alt="Angular">
-            <img class="cert-badge" src="./public/img/logos/react-logo.svg" alt="React">
-            <p class="cert-badge cert-badge-text text-dark">Express.js</p>
-            <p class="cert-badge cert-badge-text text-dark">Cheerio.js</p>
+            <div class="row justify-content-around">
+              <img class="cert-badge" src="/img/logos/nodejs-new-pantone-white.svg" alt="Node.js">
+              <img class="cert-badge invert-colors" src="/img/logos/three-js-logo.png" alt="Three.js">
+            </div>
+            <div class="row justify-content-around">
+              <img class="cert-badge" src="/img/logos/bootstrap-logo.svg" alt="Bootstrap">
+              <img class="cert-badge" src="/img/logos/puppeteer-logo.png" alt="Puppeteer">
+            </div>
+            <div class="row justify-content-around">
+              <img class="cert-badge" src="/img/logos/vite-logo.svg" alt="Vite">
+              <img class="cert-badge" src="/img/logos/angular-logo.svg" alt="Angular">
+            </div>
+            <div class="row justify-content-around">
+              <img class="cert-badge" src="/img/logos/react-logo.svg" alt="React">
+              <p class="cert-badge badge-text-only text-dark">Express.js</p>
+            </div>
+            <div class="row justify-content-around">
+              <p class="cert-badge badge-text-only text-dark">Cheerio.js</p>
+            </div>
           </section>
         </div>
       </div>
@@ -108,8 +120,9 @@
           <section>
             <h2 class="text-center mb-4">Projects</h2>
             <!-- TODO: These will be treated as ul with icons as CloudFlare image (or other hosting provi.) -->
-            <div class="list-group">
-              <a href="#" class="list-group-item list-group-item-dark list-group-item-action active">
+            <div class="list-group text-center">
+              <a href="#" 
+                 class="list-group-item list-group-item-action active">
                 This site
               </a>
               <a href="https://58c79bb9.tutorial-particlesystem.pages.dev"
@@ -178,16 +191,17 @@
         </div>
       </div>
 
+      <!-- FIXME: Grow applies it to whole div. So the hover area is huge. -->
       <footer class="pt-4 pt-md-4 border-top">
         <div class="row text-center">
-          <div class="col">
+          <div class="col grow">
             <a href="https://github.com/jjtroiano0272" class="social-link">
-              <i class="bi bi-github" style="font-size: 5rem;"></i>
+              <i class="bi bi-github"></i>
             </a>
           </div>
-          <div class="col">
+          <div class="col grow">
             <a href="https://www.linkedin.com/in/jonathan-troiano/" class="social-link">
-              <i class="bi bi-linkedin" style="font-size: 5rem;"></i>
+              <i class="bi bi-linkedin"></i>
             </a>
           </div>
         </div>

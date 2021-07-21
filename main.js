@@ -3,12 +3,12 @@ import './styles.css';
 import * as THREE from 'three';
 // import * as THREE from './vendor/three/build/three.module.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { Plane } from 'three';
 
 // Think of a scene as a container
-const scene = new THREE.Scene();
 // PerspectiveCamera mimicks what human eyeballs see
+const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-
 const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
@@ -17,27 +17,28 @@ const sizes = {
 /* Boilerplate stuff */
 // FIXME: Where did I get this code?
 /* window.addEventListener('resize', () => {
-    Update sizes
+    // Update sizes
     sizes.width = window.innerWidth;
     sizes.height = window.innerHeight;
 
-    Update camera
+    // Update camera
     camera.aspect = sizes.width / sizes.height;
     camera.updateProjectionMatrix();
     
-    Update renderer
+    // Update renderer
     renderer.setSize(sizes.width, sizes.height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 }); */
 
-/* This was all math until now. The renderer object renders the actual graphics to see.
-renderer needs to know which DOM elements to use to render graphics upon */
 const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('#bg') });
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 camera.position.setZ(30);
-// renderer.render(scene, camera);
+renderer.render(scene, camera);
 
+
+// ****TORUS *********************************************************************
+// *******************************************************************************
 // We must create a mesh by combining the geometry with the material.
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
 const material = new THREE.MeshStandardMaterial({ color: 0xFF6347 });
@@ -49,6 +50,44 @@ const pointLight = new THREE.PointLight(0xFFFFF);
 pointLight.position.set(5,5, 5);
 const ambientLight = new THREE.AmbientLight(0xFFFFFF);
 scene.add(pointLight, ambientLight);
+
+
+// **** PARTICLE GEOMETRY ********************************************************
+// *******************************************************************************
+// Background particles
+const particleGeom = new THREE.BufferGeometry();
+const particleCount = 5000;
+const positionArray = new Float32Array(particleCount * 3); // Multiple of 3 due to x, y, z axes.
+
+// Place 'particles' at random points in the background
+for (let i = 0; i < particleCount*3; i++) {
+    positionArray[i] = (Math.random() - 0.5) * 5;
+}
+particleGeom.setAttribute('position', new THREE.BufferAttribute(positionArray, 3));
+
+// These are the particle or 'stars' in the background
+const particleMaterial = new THREE.PointsMaterial({
+    size: 0.004,
+    // map: particleShape,
+    transparent: true,
+    color: 0x3c1d4e,
+    blending: THREE.AdditiveBlending
+})
+const centralShape = new THREE.Points(geometry, material);
+scene.add(centralShape);
+const particlesMesh = new THREE.Points(particleGeom, particleMaterial);
+scene.add(particlesMesh);
+
+// Mouse controls
+document.addEventListener('mousemove', animateParticles);
+let mouseX = 0;
+let mouseY = 0;
+
+function animateParticles(event) {
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+}
+
 
 /* *** DEBUG TOOLS ***
 ********************** Adds indicators for each, which are normally hidden! */
@@ -70,7 +109,9 @@ function addStar () {
 }
 Array(200).fill().forEach(addStar);
 
-const spaceTexture = new THREE.TextureLoader().load('./img/space.jpg');
+// **** TEXTURE LOADING ********************************************************
+// *****************************************************************************
+const spaceTexture = new THREE.TextureLoader().load('./img/blue-universe-956981-1500x844.jpg');
 scene.background = spaceTexture;
 
 const profileCubeTexture = new THREE.TextureLoader().load('./img/profile_pic_stylized.jpg');
@@ -116,7 +157,10 @@ document.body.onscroll = moveCamera;
 moveCamera();
 
 // Recursive animation loop, works like a Game Loop
+const clock = new THREE.Clock();
 function animate() {
+    const elapsedTime = clock.getElapsedTime();
+
     torus.rotation.x += 0.010;
     torus.rotation.y += 0.005;
     torus.rotation.z += 0.010;
@@ -128,6 +172,13 @@ function animate() {
     moon.rotation.x += 0.005;
     moon.rotation.y += 0.003;
     
+    // Stars move normally but also by mouse movement.
+    particlesMesh.rotation.y = -0.1 * elapsedTime;
+    if (mouseX > 0) {
+        particlesMesh.rotation.x  = -mouseY * (elapsedTime)*0.000008;
+        particlesMesh.rotation.y  = -mouseX * (elapsedTime)*0.000008;
+    }
+
     // So whenever the browser repaints the screen it calls the render method to update UI
     const canvas = renderer.domElement;
     // camera.aspect = document.querySelector('#bg').clientWidth / document.querySelector('#bg').clientHeight;
