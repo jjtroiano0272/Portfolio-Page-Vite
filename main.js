@@ -7,6 +7,7 @@ import { Plane } from 'three';
 
 // Think of a scene as a container
 // PerspectiveCamera mimicks what human eyeballs see
+const clock = new THREE.Clock();
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const sizes = {
@@ -16,7 +17,7 @@ const sizes = {
 
 /* Boilerplate stuff */
 // FIXME: Where did I get this code?
-/* window.addEventListener('resize', () => {
+window.addEventListener('resize', () => {
     // Update sizes
     sizes.width = window.innerWidth;
     sizes.height = window.innerHeight;
@@ -28,7 +29,7 @@ const sizes = {
     // Update renderer
     renderer.setSize(sizes.width, sizes.height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-}); */
+});
 
 const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector('#bg') });
 renderer.setPixelRatio(window.devicePixelRatio);
@@ -89,15 +90,11 @@ function animateParticles(event) {
 }
 
 
-/* *** DEBUG TOOLS ***
-********************** Adds indicators for each, which are normally hidden! */
-// const lightHelper = new THREE.PointLightHelper(pointLight);
-// const gridHelper = new THREE.GridHelper(200, 50);
-// scene.add(lightHelper, gridHelper);
+
 
 const controls = new OrbitControls(camera, renderer.domElement);
 
-// Add 200 stars & set an external image as background
+// Add 200 stars
 function addStar () {
     const geometry = new THREE.SphereGeometry(0.25, 24, 24);
     const material = new THREE.MeshStandardMaterial({ color: 0xFFFFFF });
@@ -147,9 +144,9 @@ function moveCamera() {
     profileCube.rotation.y += 0.005;
     profileCube.rotation.z += 0.005;
 
-    camera.position.z = t * -0.0100;
-    camera.position.x = t * -0.0002;
-    camera.position.y = t * -0.0002;
+    camera.position.z = -0.0100*t;
+    camera.position.x = -0.0002*t;
+    camera.position.y = -0.0002*t;
 }
 /* BUG:  setting this property to moveCamera() breaks the scrolling.
 I don't know why referencing the moveCamera function as a var lets it work. */
@@ -157,7 +154,6 @@ document.body.onscroll = moveCamera;
 moveCamera();
 
 // Recursive animation loop, works like a Game Loop
-const clock = new THREE.Clock();
 function animate() {
     const elapsedTime = clock.getElapsedTime();
 

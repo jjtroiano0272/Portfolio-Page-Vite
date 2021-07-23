@@ -21,7 +21,7 @@ canvas {
 /* Currently required for scene to render to page and keep measurements! */
 main {
   width: 100vw;
-  width: 100%;
+  /* width: 100%; */
   /* color: white; */
   z-index: 99;
   /* This is the rule that ensures scroll behavior happens. */
@@ -204,6 +204,18 @@ blockquote p {
 }
 .grow:hover {
   transform: scale(1.2);
+}
+
+.yt:hover {
+  color: #c4302b;
+}
+
+.li:hover {
+  color: #0e76a8;
+}
+
+.gh:hover {
+  color: #000000;
 }
 
 @media (max-width: 768px) {
