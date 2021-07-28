@@ -112,7 +112,7 @@ Array(200).fill().forEach(addStar);
 const spaceTexture = new THREE.TextureLoader().load('./img/blue-universe-956981-1500x844.jpg');
 scene.background = spaceTexture;
 
-const profileCubeTexture = new THREE.TextureLoader().load('./img/profile_pic_stylized.jpg');
+const profileCubeTexture = new THREE.TextureLoader().load('./img/profile_pic_stylized_2.jpg');
 const profileCube = new THREE.Mesh(
     new THREE.BoxGeometry(3, 3, 3),
     new THREE.MeshBasicMaterial({ map: profileCubeTexture })
