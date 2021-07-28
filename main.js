@@ -71,6 +71,7 @@ const particleMaterial = new THREE.PointsMaterial({
     size: 0.004,
     // map: particleShape,
     transparent: true,
+    opacity: 0.7,
     color: 0x3c1d4e,
     blending: THREE.AdditiveBlending
 })
