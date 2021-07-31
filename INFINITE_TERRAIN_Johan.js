@@ -17,6 +17,10 @@ import * as THREE from 'three';
 import SimplexNoise from 'simplex-noise';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { PlaneGeometry } from 'three';
+import * as dat from 'dat.gui';
+import { GUI } from "three/examples/jsm/libs/dat.gui.module";
+
+
 
 let scene;
 let camera;
@@ -128,6 +132,12 @@ function setupLights() {
 
 function setupEventListeners() {
   window.addEventListener("resize", onWindowResize);
+}
+
+function setupDatGUI() {
+  // Following along with https://www.youtube.com/watch?v=Q6fx_3rjhWY
+  const gui = new dat.GUI();
+  gui.add(camera.position, "x", -50, 50, 1);
 }
 
 function onWindowResize() {
